@@ -4,6 +4,11 @@
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    height: calc(100% - 60px);
+}
+
+map{
+    height: 100%!important;
 }
 
 #wrapper.toggled {
@@ -11,6 +16,7 @@
 }
 
 #sidebar-wrapper {
+    top:60px;
     z-index: 1000;
     position: fixed;
     right: 40%;
@@ -31,12 +37,13 @@
 
 #page-content-wrapper {
     width: 100%;
-    position: absolute;
+    height: 100%;
+    /*position: absolute;*/
     /*padding: 15px;*/
 }
 
 #wrapper.toggled #page-content-wrapper {
-    position: absolute;
+    position: relative;
     margin-left: -40%;
 }
 
@@ -74,7 +81,7 @@
 
     #page-content-wrapper {
         /*padding: 20px;*/
-        /*position: relative;*/
+        position: relative;
     }
 
     #wrapper.toggled #page-content-wrapper {

@@ -48,25 +48,27 @@
     </div>
     <!-- END TOP NAVIGATION BAR -->
 </div>
-<!-- END HEADER -->
-<div id="wrapper">
+
+    <!-- END HEADER -->
+    <div id="wrapper" class="toggled">
 
 
-    <!-- Page Content -->
-    <div id="page-content-wrapper">
-        <div class="container-fluid">
-            <map center="-34.397, 150.644" zoom="8"></map>
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+                <map center="-34.397, 150.644" zoom="8"></map>
+
         </div>
-    </div>
-    <!-- /#page-content-wrapper -->
-    <!-- Sidebar -->
-    <div id="sidebar-wrapper">
-        <div ng-repeat="station in mapsVm.stations.list">
-            {{station.text}}
+        <!-- /#page-content-wrapper -->
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <div ng-repeat="station in mapsVm.stations.list">
+                {{station.text}}
+            </div>
         </div>
+        <!-- /#sidebar-wrapper -->
     </div>
-    <!-- /#sidebar-wrapper -->
-</div>
+
 <!-- /#wrapper -->
 <!--<div id="footer">-->
 
