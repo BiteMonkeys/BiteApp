@@ -41,7 +41,7 @@
 
         <!-- BEGIN CONTENT HEADER -->
         <div class="header-quick-nav">
-            <a href="" ng-click="showMarkers()">show markers</a>
+            <!--<a class="btn m-t-10 m-l-15" id="menu-toggle" href="" >Rodyti/nerodyti</a>-->
         </div>
         <!-- END CONTENT HEADER -->
     </div>
@@ -56,20 +56,23 @@
     <div id="page-content-wrapper">
 
         <map center="56, 24" zoom="8">
-            <marker position="{{position.lat}},{{position.lng}}"
-                    title="Hello World!"
-                    ng-repeat="position in positions"
-                    on-click="openDetails()"
-                    ></marker>
+            <!--<marker position="{{position.lat}},{{position.lng}}"-->
+                    <!--title="Hello World!"-->
+                    <!--ng-repeat="position in positions"-->
+                    <!--on-click="openDetails()"-->
+                    <!--</marker>-->
         </map>
 
     </div>
     <!-- /#page-content-wrapper -->
     <!-- Sidebar -->
-    <div id="sidebar-wrapper" data-ng-if="detailsOpened">
-        <div>
-            <h2>{{mapsVm.stationDetails.title}}</h2>
-            {{mapsVm.stationDetails.text}}
+   <div id="sidebar-wrapper">  <!-- data-ng-if="detailsOpened"-->
+        <div id="station-info">
+            <h2 id="station-title"></h2>
+            <p id="station-description">
+
+            </p>
+
         </div>
     </div>
     <!-- /#sidebar-wrapper -->
