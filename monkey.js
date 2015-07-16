@@ -1,62 +1,19 @@
 angular.module('biteMonkeyApp', ['ngMap'])
     .controller('MapsController', function ($scope, $timeout) {
-        var mapsVm = $scope;
+        var mapsVm = this;
         mapsVm.detailsOpened = false;
-        $scope.positions = [];
+        mapsVm.positions = [];
+        mapsVm.stationDetails = {};
 
         mapsVm.stations = {
             zoomLevel: 8,
-            list: [
-                {
-                    title: 'Vilnius station 1',
-                    text: 'some text about station',
-                    done: true,
-                    location: {
-                        latitude: 54.6957829,
-                        longtitude: 25.2941403
-                    }
-                },
-                {
-                    title: 'Vilnius station 2',
-                    text: 'some text about station',
-                    done: true,
-                    location: {
-                        latitude: 54.6965079,
-                        longtitude: 25.2969904
-                    }
-                },
-                {
-                    title: 'Kaunas station 1',
-                    text: 'some text about station',
-                    done: true,
-                    location: {
-                        latitude: 54.8700193,
-                        longtitude: 24.4910278
-                    }
-                },
-                {
-                    title: 'Klaipëda station 1',
-                    text: 'some text about station',
-                    done: true,
-                    location: {
-                        latitude: 55.780192,
-                        longtitude: 21.9168739
-                    }
-                },
-                {
-                    title: 'Vilkyèiø bokðtas',
-                    text: 'some text about station',
-                    done: true,
-                    location: {
-                        latitude: 55.5048628,
-                        longtitude: 21.4190639
-                    }
-                }
-            ]
+            list: dataJS
         };
 
         $scope.$on('mapInitialized', function (event, map) {
             map.setCenter(new google.maps.LatLng(56, 24));
+
+
 
             //google.maps.event.addDomListener(window, 'resize', function() {
             //    map.setCenter(center);
@@ -71,10 +28,10 @@ angular.module('biteMonkeyApp', ['ngMap'])
 
             for (var i = 0; i < mapsVm.stations.list.length; i++) {
                 var store = mapsVm.stations.list[i];
-                store.position = new google.maps.LatLng(store.location.latitude, store.location.longtitude);
+                store.position = new google.maps.LatLng(store.location.latitude, store.location.longitude);
                 //store.title = store.title;
 
-                $scope.positions.push({lat: store.location.latitude, lng: store.location.longtitude});
+                mapsVm.positions.push({lat: store.location.latitude, lng: store.location.longitude});
 
                 //var marker = new google.maps.Marker(store);
 
@@ -82,7 +39,7 @@ angular.module('biteMonkeyApp', ['ngMap'])
                     position: store.position,
                     map: map,
                     title: store.title,
-                    text: store.text
+                    station: store
                 });
 
                 attachEventToMarker(marker, map);
@@ -106,18 +63,23 @@ angular.module('biteMonkeyApp', ['ngMap'])
         //    };
         //};
 
-        $scope.openDetails = function (marker) {
+        mapsVm.openDetails = function (marker) {
             console.log(marker);
 
             $("#wrapper").removeClass("toggled");
 
-            $("#station-info #station-title").text(marker.title);
-            $("#station-info #station-description").text(marker.text);
+            //$("#station-info #station-title").text(marker.station.title);
+            //$("#station-info #station-description").text(marker.station.text);
+
+
 
             mapsVm.detailsOpened = true;
-            mapsVm.stationDetails = mapsVm.stations.list[0];
 
+            $scope.$apply(function () {
+                mapsVm.stationDetails = marker.station;
+            });
         }
+
 
         function closeDetails() {
             $("#wrapper").addClass("toggled");
@@ -128,12 +90,13 @@ angular.module('biteMonkeyApp', ['ngMap'])
 
             google.maps.event.addListener(marker, 'click', function () {
                 mapsVm.openDetails(marker);
-
                 // kas á centra varytu  || tik ið antro karto :(
-                var center = map.getCenter();
-                google.maps.event.trigger(map, "resize");
-                map.setCenter(center);
-
+                //var center = map.getCenter();
+                //google.maps.event.trigger(map, "resize");
+                //map.setCenter(center);
+                $scope.$apply(function () {
+                    mapsVm.stationDetails = marker.station;
+                });
                 map.panTo(marker.getPosition());
                 map.setZoom(12);
 
