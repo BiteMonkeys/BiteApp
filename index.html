@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" ng-app="biteMonkeyApp">
 <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
@@ -37,47 +37,131 @@
 <!-- BEGIN BODY -->
 <body class="" ng-controller="MapsController as mapsVm">
 <div class="header">
-    <!-- BEGIN TOP NAVIGATION BAR -->
     <div class="navbar-inner">
-
-        <!-- BEGIN CONTENT HEADER -->
         <div class="header-quick-nav">
-            <!--<a class="btn m-t-10 m-l-15" id="menu-toggle" href="" >Rodyti/nerodyti</a>-->
         </div>
-        <!-- END CONTENT HEADER -->
     </div>
-    <!-- END TOP NAVIGATION BAR -->
 </div>
-
 <!-- END HEADER -->
 <div id="wrapper" class="toggled">
 
-
-    <!-- Page Content -->
     <div id="page-content-wrapper">
-
         <map center="56, 24" zoom="8"></map>
-
     </div>
-    <!-- /#page-content-wrapper -->
+
     <!-- Sidebar -->
-   <div id="sidebar-wrapper">  <!-- data-ng-if="detailsOpened"-->
-        <div id="station-info">
-            <h2 id="station-title">{{mapsVm.stationDetails.name}}</h2>
-            <p id="station-description">
-                {{mapsVm.stationDetails.company}}
-            </p>
-            <p>Network: {{mapsVm.stationDetails.network}}</p>
+    <div id="sidebar-wrapper" class="container-fluid">
+        <div class="row no-margin" id="station-info">
+            <h2 id="station-title">{{mapsVm.stationDetails.name}}</h2> <span class="info-company">{{mapsVm.stationDetails.company}}</span>
+
+            <div class="separator"></div>
+            <div class="col-md-12 col-sm-12">
+                <dl class="dl-horizontal">
+                    <dt>Site address</dt>
+                    <dd>{{mapsVm.stationDetails.address}}</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Owner</dt>
+                    <dd>{{mapsVm.stationDetails.lesser}}</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Municipality</dt>
+                    <dd>{{mapsVm.stationDetails.municipality}}</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Lease start</dt>
+                    <dd>{{mapsVm.stationDetails.leaseStart | date:"yyyy-MM-dd"}}</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Lease term prolonged</dt>
+                    <dd>{{mapsVm.stationDetails.leaseProlonged | date:"yyyy-MM-dd"}}</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Automatic extension</dt>
+                    <dd>{{mapsVm.stationDetails.autoExtension}}</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>The notice period</dt>
+                    <dd>{{mapsVm.stationDetails.noticePeriod | date:"yyyy-MM-dd"}}</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Termination of the lessor's side</dt>
+                    <dd>{{mapsVm.stationDetails.terminationLesser}}</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Compensation (lessor)</dt>
+                    <dd>{{mapsVm.stationDetails.compensationLesser}}</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Termination of the tenant's side</dt>
+                    <dd>{{mapsVm.stationDetails.terminationTenant}}</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Compensation (tenant)</dt>
+                    <dd>{{mapsVm.stationDetails.compensationTenant}}</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Lease cost per month</dt>
+                    <dd>{{mapsVm.stationDetails.leaseMonth}} €</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Lease cost per year</dt>
+                    <dd>{{mapsVm.stationDetails.leaseYear}} €</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Indexation</dt>
+                    <dd>{{mapsVm.stationDetails.indexation}}</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Payment method</dt>
+                    <dd>{{mapsVm.stationDetails.paymentMethod}}</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Network</dt>
+                    <dd>{{showNetwork(mapsVm.stationDetails.network)}}</dd>
+                </dl>
+
+                <!-- Kontaktai ir NOTES-->
+                <div class="separator"></div>
+                <h4>Contacts</h4>
+
+                <dl class="dl-horizontal row no-row-padding" ng-repeat="contact in mapsVm.stationDetails.contacts">
+                    <dt>
+                        <div class="contact-note">{{contact.note}}</div>
+                        {{contact.name}}
+                    </dt>
+                    <dd>
+                        <div class="contact-email">{{contact.email}}</div>
+                        <div class="contact-phone">{{contact.phone}}</div>
+                    </dd>
+                </dl>
+
+
+                <div class="separator m-t-20"></div>
+                <h4>Notes</h4>
+
+                <dl class="dl-horizontal row no-row-padding" ng-repeat="note in mapsVm.stationDetails.notes">
+                    <dt>
+                    <div class="contact-note">{{note.date | date:"yyyy-MM-dd HH:mm"}}</div>
+                    {{note.user}}
+                    </dt>
+                    <dd>
+                        <div class="contact-email">{{note.message}}</div>
+                    </dd>
+                </dl>
+
+
+                <div style="height: 70px;"></div>
+            </div>
+
 
         </div>
     </div>
     <!-- /#sidebar-wrapper -->
 </div>
 
-<!-- /#wrapper -->
 <!--<div id="footer">-->
 
-<!--</div>-->
 <!-- END CONTAINER -->
 <!-- BEGIN CORE JS FRAMEWORK-->
 <script src="assets/plugins/jquery-1.8.3.min.js" type="text/javascript"></script>

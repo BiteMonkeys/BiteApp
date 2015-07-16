@@ -89,3 +89,56 @@ map{
         margin-left: 0;
     }
 }
+/*---------------------------------------------------------------------------------------------------------------*/
+
+#sidebar-wrapper .dl-horizontal{
+    font-size: 15px;
+}
+
+#sidebar-wrapper .dl-horizontal dt{
+    text-align: left;
+    width: 33%;
+    font-weight: normal;
+    color: #232323;
+}
+
+#sidebar-wrapper .dl-horizontal dd {
+    margin-left: 33%;
+}
+
+
+#sidebar-wrapper h4{
+    padding-bottom: 8px;
+}
+
+#sidebar-wrapper h2{
+    line-height: normal;
+    font-size: 35pt;
+    padding: 15px 10px 15px 0px;
+    margin-left: 15px;
+}
+
+.no-margin{
+    margin: 0!important;
+}
+
+.separator{
+    margin-bottom: 20px;
+    border-bottom: 1px solid #CDCDCD;
+}
+.info-company{
+    float: right;
+    position: relative;
+    top: -80px;
+    right: 15px;
+}
+
+.contact-note {
+    font-size: 14px;
+    color: #cecece;
+}
+
+.no-row-padding{
+    margin-left: 0;
+    margin-right: 0;
+}

@@ -1,10 +1,10 @@
-var dataJS = [
+ï»¿var dataJS = [
     {
         company: 'Bite',
         name: 'VL036',
         municipality : 'Vilnius',
         address : 'Vaduvos str. 21, Vilniaus m., Vilniaus m. sav. ',
-        lesser : 'UAB "Vilkpedës bûstas"',
+        lesser : 'UAB "VilkpedÄ—s bÅ«stas"',
         leaseStart : new Date('2009-06-02'),
         leaseProlonged : new Date('2020-06-01'),
         autoExtension : true,
@@ -35,12 +35,12 @@ var dataJS = [
         notes : [
             {
                 user: 'Jonas Jonaitis',
-                date: '2015-07-10 10:43',
-                message: 'Pakalbëjau, viskas ok!'
+                date: new Date('2015-07-10 10:43'),
+                message: 'PakalbÄ—jau, viskas ok! Ali, yes after your edit I think the api response itself is the problem, not your code. Altough you might still want to consider in which element to put your ng-repeat.'
             },
             {
                 user: 'Jonas Jonaitis',
-                date: '2015-07-13 15:13',
+                date: new Date('2015-07-13 15:13'),
                 message: 'Jau nebe ok. lala'
             }
         ],
@@ -70,7 +70,7 @@ var dataJS = [
         network : '4G',
         contacts : [
             {
-                note: 'neaiğku',
+                note: 'neaiÅ¡ku',
                 name: 'Jonas Jonauskas',
                 email: 'sexy_bunny69@one.lt',
                 phone: '862965775'
@@ -79,8 +79,8 @@ var dataJS = [
         notes : [
             {
                 user: 'Jonas Jonaitis',
-                date: '2015-07-11 10:43',
-                message: 'Pakalbëjau, viskas ok!'
+                date: new Date('2015-07-11 10:43'),
+                message: 'PakalbÄ—jau, viskas ok!'
             }
         ],
         location: {
@@ -91,9 +91,9 @@ var dataJS = [
     {
         company: 'TeleTower',
         name: 'KED02',
-        municipality : 'Këdainiai',
-        address : 'Vilnius str. 10, Këdainiai',
-        lesser : 'UAB "Panevëşio sûris"',
+        municipality : 'KÄ—dainiai',
+        address : 'Vilnius str. 10, KÄ—dainiai',
+        lesser : 'UAB "PanevÄ—Å¾io sÅ«ris"',
         leaseStart : new Date('2010-09-01'),
         leaseProlonged : new Date('2022-01-01'),
         autoExtension : true,
@@ -118,12 +118,12 @@ var dataJS = [
         notes : [
             {
                 user: 'Jonas Jonaitis',
-                date: '2015-07-10 10:43',
-                message: 'Pakalbëjau, viskas ok!'
+                date: new Date('2015-07-10 10:43'),
+                message: 'PakalbÄ—jau, viskas ok!'
             },
             {
                 user: 'Jonas Jonaitis',
-                date: '2015-07-13 15:13',
+                date: new Date('2015-07-13 15:13'),
                 message: 'Jau nebe ok. lala'
             }
         ],
@@ -135,8 +135,8 @@ var dataJS = [
     {
         company: 'TeleTower',
         name: 'KL010',
-        municipality : 'Klaipëda',
-        address : 'Upelio str. 12, Klaipëda',
+        municipality : 'KlaipÄ—da',
+        address : 'Upelio str. 12, KlaipÄ—da',
         lesser : 'UAB "Uostas"',
         leaseStart : new Date('2010-11-15'),
         leaseProlonged : new Date('2018-12-01'),
@@ -168,12 +168,12 @@ var dataJS = [
         notes : [
             {
                 user: 'Antanas Jonaitis',
-                date: '2015-07-10 10:43',
-                message: 'Pakalbëjau, viskas ok!'
+                date: new Date('2015-07-10 10:43'),
+                message: 'PakalbÄ—jau, viskas ok!'
             },
             {
                 user: 'Jonas Petrikas',
-                date: '2015-07-13 15:13',
+                date: new Date('2015-07-13 15:13'),
                 message: 'Jau nebe ok. lala'
             }
         ],
@@ -185,8 +185,8 @@ var dataJS = [
     {
         company: 'Bite',
         name: 'PN098',
-        municipality : 'Panevëşys',
-        address : 'Vilniaus str. 54, Panevëşio m., Panevëşio m. sav. ',
+        municipality : 'PanevÄ—Å¾ys',
+        address : 'Vilniaus str. 54, PanevÄ—Å¾io m., PanevÄ—Å¾io m. sav. ',
         lesser : 'UAB "Statybos trestas"',
         leaseStart : new Date('2009-10-02'),
         leaseProlonged : new Date('2020-10-01'),
@@ -203,7 +203,7 @@ var dataJS = [
         network : '4G',
         contacts : [
             {
-                note: 'Atstovas - administratorë',
+                note: 'Atstovas - administratorÄ—',
                 name: 'Maryte Kvietkute',
                 email: 'sexy_bunny69@one.lt',
                 phone: '862965775'
@@ -211,8 +211,8 @@ var dataJS = [
         ],
         notes : [
             {
-                user: 'Rokiğkis Radiğkevièius',
-                date: '2014-07-10 10:43',
+                user: 'RokiÅ¡kis RadiÅ¡keviÄius',
+                date: new Date('2014-07-10 10:43'),
                 message: 'nori daugiau'
             }
         ],
@@ -224,9 +224,9 @@ var dataJS = [
     {
         company: 'Bite',
         name: 'SL016',
-        municipality : 'Ğiauliai',
-        address : 'Vilniaus str. 10, Ğiauliø m., Ğiauliø m. sav. ',
-        lesser : 'UAB "Ğiaurës vilkas"',
+        municipality : 'Å iauliai',
+        address : 'Vilniaus str. 10, Å iauliÅ³ m., Å iauliÅ³ m. sav. ',
+        lesser : 'UAB "Å iaurÄ—s vilkas"',
         leaseStart : new Date('2010-02-01'),
         leaseProlonged : new Date('2019-04-01'),
         autoExtension : true,
@@ -251,8 +251,8 @@ var dataJS = [
         notes : [
             {
                 user: 'Zigmas Butkus',
-                date: '2015-08-10 10:43',
-                message: 'Pakalbëjau, viskas ok!'
+                date: new Date('2015-08-10 10:43'),
+                message: 'PakalbÄ—jau, viskas ok!'
             }
         ],
         location: {

@@ -1,4 +1,4 @@
-angular.module('biteMonkeyApp', ['ngMap'])
+ï»¿angular.module('biteMonkeyApp', ['ngMap'])
     .controller('MapsController', function ($scope, $timeout) {
         var mapsVm = this;
         mapsVm.detailsOpened = false;
@@ -90,7 +90,7 @@ angular.module('biteMonkeyApp', ['ngMap'])
 
             google.maps.event.addListener(marker, 'click', function () {
                 mapsVm.openDetails(marker);
-                // kas á centra varytu  || tik ið antro karto :(
+                // kas Ä¯ centra varytu  || tik iÅ¡ antro karto :(
                 //var center = map.getCenter();
                 //google.maps.event.trigger(map, "resize");
                 //map.setCenter(center);
@@ -101,6 +101,12 @@ angular.module('biteMonkeyApp', ['ngMap'])
                 map.setZoom(12);
 
             });
+
         }
+
+        $scope.showNetwork = function(input) {
+            return input == '3G' ? "<span class='badge'"+input+"</span>" : "<span class='badge badge-success'>"+input+"</span>";
+        };
+
 
     });
