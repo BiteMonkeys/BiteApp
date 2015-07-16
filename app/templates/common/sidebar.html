@@ -1,0 +1,107 @@
+<div id="sidebar-wrapper" class="container-fluid">
+        <div class="row no-margin" id="station-info">
+            <h2 id="station-title">{{stationDetails.name}}</h2> <span class="info-company">{{stationDetails.company}}</span>
+
+            <div class="separator"></div>
+            <div class="col-md-12 col-sm-12">
+                <dl class="dl-horizontal">
+                    <dt>Site address</dt>
+                    <dd>{{stationDetails.address}}</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Owner</dt>
+                    <dd>{{stationDetails.lesser}}</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Municipality</dt>
+                    <dd>{{stationDetails.municipality}}</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Lease start</dt>
+                    <dd>{{stationDetails.leaseStart | date:"yyyy-MM-dd"}}</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Lease term prolonged</dt>
+                    <dd>{{stationDetails.leaseProlonged | date:"yyyy-MM-dd"}}</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Automatic extension</dt>
+                    <dd>{{stationDetails.autoExtension}}</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>The notice period</dt>
+                    <dd>{{stationDetails.noticePeriod | date:"yyyy-MM-dd"}}</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Termination of the lessor's side</dt>
+                    <dd>{{stationDetails.terminationLesser}}</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Compensation (lessor)</dt>
+                    <dd>{{stationDetails.compensationLesser}}</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Termination of the tenant's side</dt>
+                    <dd>{{stationDetails.terminationTenant}}</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Compensation (tenant)</dt>
+                    <dd>{{stationDetails.compensationTenant}}</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Lease cost per month</dt>
+                    <dd>{{stationDetails.leaseMonth}} €</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Lease cost per year</dt>
+                    <dd>{{stationDetails.leaseYear}} €</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Indexation</dt>
+                    <dd>{{stationDetails.indexation}}</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Payment method</dt>
+                    <dd>{{stationDetails.paymentMethod}}</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                    <dt>Network</dt>
+                    <dd>{{showNetwork(stationDetails.network)}}</dd>
+                </dl>
+
+                <!-- Kontaktai ir NOTES-->
+                <div class="separator"></div>
+                <h4>Contacts</h4>
+
+                <dl class="dl-horizontal row no-row-padding" ng-repeat="contact in stationDetails.contacts">
+                    <dt>
+                        <div class="contact-note">{{contact.note}}</div>
+                        {{contact.name}}
+                    </dt>
+                    <dd>
+                        <div class="contact-email">{{contact.email}}</div>
+                        <div class="contact-phone">{{contact.phone}}</div>
+                    </dd>
+                </dl>
+
+
+                <div class="separator m-t-20"></div>
+                <h4>Notes</h4>
+
+                <dl class="dl-horizontal row no-row-padding" ng-repeat="note in stationDetails.notes">
+                    <dt>
+                    <div class="contact-note">{{note.date | date:"yyyy-MM-dd HH:mm"}}</div>
+                    {{note.user}}
+                    </dt>
+                    <dd>
+                        <div class="contact-email">{{note.message}}</div>
+                    </dd>
+                </dl>
+
+
+                <div style="height: 70px;"></div>
+            </div>
+
+
+        </div>
+    </div>
