@@ -4,5 +4,6 @@ var app = angular.module('maps', [
     "ngMap",
     "ui.router",
     "ngResource",
-    "ngSanitize"
+    "ngSanitize",
+    "ui.bootstrap"
 ]);

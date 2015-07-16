@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
-    <title>Bite Map App</title>
+    <title>BiteMonkey Maps</title>
 	<meta charset="utf-8"/>
-    <base href="/BiteApp/BiteApp/"/>
+    <base href="/BiteApp/"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <meta content="" name="description"/>
     <meta content="" name="author"/>
@@ -32,6 +32,7 @@
 	<script src="dist/js/angular-ui-router.min.js"></script>
 	<script src="dist/js/ng-map.min.js"></script>
 	<script src="https://maps.google.com/maps/api/js"></script>
+    <script src="dist/js/ui-bootstrap-tpls-0.13.0.min.js"></script>
 	<!-- App files -->
     <script src="app/common/module.js"></script>
     <script src="app/common/config.js"></script>
@@ -45,6 +46,20 @@
 <div class="header">
     <div class="navbar-inner">
         <div class="header-quick-nav">
+            <div class="col-md-4">
+                <h2>BiteMonkey Maps</h2>
+            </div>
+            <div class="col-md-4" style="margin-top: 10px;">
+                <input placeholder="Search.."
+                        type="text"
+                       ng-model="selected"
+                       typeahead-on-select="search($item)"
+                       typeahead="station.name for station in stations | filter:$viewValue | limitTo:8"
+                       class="form-control">
+            </div>
+            <div class="col-md-4">
+                <h3 class="pull-right"><a href="#">Login</a></h3>
+            </div>
         </div>
     </div>
 </div>
@@ -56,7 +71,9 @@
     </div>
 
     <!-- Sidebar -->
-	<div ng-include="'app/templates/common/sidebar.html'" id="mainSidebar"></div>
+	<div ng-if="detailsOpened" id="mainSidebar">
+        <div  ng-include="'app/templates/common/sidebar.html'"></div>
+    </div>
     
     <!-- /#sidebar-wrapper -->
 </div>
