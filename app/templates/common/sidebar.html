@@ -1,4 +1,4 @@
-﻿<div id="sidebar-wrapper" class="container-fluid">
+<div id="sidebar-wrapper" class="container-fluid no-padding">
         <div class="row no-margin" id="station-info">
             <h2 id="station-title">{{stationDetails.name}}</h2> <span class="info-company">{{stationDetails.company}}</span>
 
@@ -70,6 +70,7 @@
                             <dt>Network</dt>
                             <dd ng-bind-html="showNetwork(stationDetails.network)"></dd>
                         </dl>
+                    <div style="height: 35px;"></div>
                 </tab>
                 <tab heading="Contacts">
                     <dl class="dl-horizontal row no-row-padding" ng-repeat="contact in stationDetails.contacts">

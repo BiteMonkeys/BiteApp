@@ -66,7 +66,9 @@ app.controller('MapsController', ['$rootScope', "$scope", '$state', 'stationsRes
             $("#wrapper").addClass("toggled");
             $rootScope.detailsOpened = false;
             map.setZoom(8);
-            map.setCenter($rootScope.lithuniaLocation);
+            $timeout(function() {
+                map.setCenter($rootScope.lithuniaLocation);
+            }, 400);
         }
 
         function attachEventToMarker(marker, map){
@@ -100,6 +102,6 @@ app.controller('MapsController', ['$rootScope', "$scope", '$state', 'stationsRes
         };
 
         $rootScope.showNetwork = function(input) {
-            return input == '3G' ? "<span class='badge'"+input+"</span>" : "<span class='badge badge-success'>"+input+"</span>";
+            return input == '3G' ? "<span class='badge'>"+input+"</span>" : "<span class='badge badge-success'>"+input+"</span>";
         };
     }]);

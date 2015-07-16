@@ -138,7 +138,11 @@ map{
     color: #cecece;
 }
 
-.no-row-padding{
+.no-row-margin{
     margin-left: 0;
     margin-right: 0;
+}
+.no-row-padding{
+    padding-left: 0;
+    padding-right: 0;
 }
