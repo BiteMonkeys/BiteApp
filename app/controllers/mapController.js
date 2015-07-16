@@ -21,11 +21,11 @@ app.controller('MapsController', ['$rootScope', "$scope", '$state', 'stationsRes
             });
 
 
-            for (var i = 0; i < $rootScope.stations.list.length; i++) {
-                var store = $rootScope.stations.list[i];
+            for (var i = 0; i < $rootScope.stations.length; i++) {
+                var store = $rootScope.stations[i];
                 store.position = new google.maps.LatLng(store.location.latitude, store.location.longitude);
 
-                mapsVm.positions.push({lat: store.location.latitude, lng: store.location.longitude});
+                $rootScope.positions.push({lat: store.location.latitude, lng: store.location.longitude});
 
                 var marker = new google.maps.Marker({
                     position: store.position,
@@ -46,7 +46,7 @@ app.controller('MapsController', ['$rootScope', "$scope", '$state', 'stationsRes
 		$rootScope.openDetails = function (marker) {
             console.log(marker);
 
-            //$("#wrapper").removeClass("toggled");
+            $("#wrapper").removeClass("toggled");
 
             $rootScope.detailsOpened = true;
 
@@ -57,7 +57,7 @@ app.controller('MapsController', ['$rootScope', "$scope", '$state', 'stationsRes
 
 
         function closeDetails() {
-            //$("#wrapper").addClass("toggled");
+            $("#wrapper").addClass("toggled");
             $rootScope.detailsOpened = false;
         }
 
