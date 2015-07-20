@@ -74,7 +74,7 @@
                             <dt>Contract</dt>
                             <dd><a href="{{stationDetails.paper}}" target=_blank><img src="assets/img/pdf_icon.png"></a></dd>
                         </dl>
-                    <div style="height: 15px;"></div>
+                    <div style="height: 15px; clear: both;"></div>
                 </tab>
                 <tab heading="Contacts">
                     <dl class="dl-horizontal row no-row-padding" ng-repeat="contact in stationDetails.contacts">
@@ -87,8 +87,8 @@
                             <div class="contact-phone">{{contact.phone}}</div>
                         </dd>
                     </dl>
-                    <div style="height: 15px;"></div>
                     <button type="button" class="btn btn-primary btn-xs pull-right m-b-10">Add new contact</button>
+                    <div style="height: 5px; clear: both;"></div>
                 </tab>
                 <tab heading="Notes">
                     <dl class="dl-horizontal row no-row-padding" ng-repeat="note in stationDetails.notes">
@@ -100,7 +100,8 @@
                             <div class="contact-email">{{note.message}}</div>
                         </dd>
                     </dl>
-                    <div style="height: 15px;"></div>
+                    <button type="button" class="btn btn-primary btn-xs pull-right m-b-10">Add new note</button>
+                    <div style="height: 5px; clear: both;"></div>
                 </tab>
             </tabset>
         </div>
