@@ -18,17 +18,18 @@
         "indexation" : false,
         "paymentMethod" : "monthly",
         "network" : "3G",
+        "paper" : "http://bite.provictus.lt/assets/contract.pdf",
         "contacts" : [
             {
                 "note": "Nuomotojo atstovas",
                 "name": "Maryte Kvietkute",
-                "email": "sexy_bunny69@one.lt",
+                "email": "demo@demo.lt",
                 "phone": "862965775"
             },
             {
                 "note": "Nuomotojo atstovas",
                 "name": "Petras Kirdeikis",
-                "email": "sexy_bunny68@one.lt",
+                "email": "demo@demo.lt",
                 "phone": ""
             }
         ],
@@ -36,12 +37,12 @@
             {
                 "user": "Jonas Jonaitis",
                 "date": "2015-07-10 10:43",
-                "message": "Pakalbėjau, viskas ok! Ali, yes after your edit I think the api response itself is the problem, not your code. Altough you might still want to consider in which element to put your ng-repeat."
+                "message": "Ali, yes after your edit I think the api response itself is the problem, not your code. Altough you might still want to consider in which element to put your ng-repeat."
             },
             {
                 "user": "Jonas Jonaitis",
                 "date": "2015-07-13 15:13",
-                "message": "Jau nebe ok. lala"
+                "message": "Nulla facilisi. Phasellus at sodales enim. Duis ultricies mi id mi efficitur, ac fermentum eros aliquam. Proin facilisis ipsum sapien. Praesent feugiat eros in risus posuere sodales. In vel quam eu justo dignissim accumsan id nec leo. Quisque ac fringilla elit. Aliquam ullamcorper nulla velit, at mollis ipsum dignissim quis. Duis at magna at augue tristique commodo quis sit amet mi. Nam et sem malesuada urna feugiat ornare non ut lacus. "
             }
         ],
         "location": {
@@ -72,7 +73,7 @@
             {
                 "note": "neaišku",
                 "name": "Jonas Jonauskas",
-                "email": "sexy_bunny69@one.lt",
+                "email": "demo@demo.lt",
                 "phone": "862965775"
             }
         ],
@@ -80,7 +81,7 @@
             {
                 "user": "Jonas Jonaitis",
                 "date": "2015-07-11 10:43",
-                "message": "Pakalbėjau, viskas ok!"
+                "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel molestie odio. Phasellus sed varius sem, ac convallis enim. In ut purus in odio pretium placerat. Fusce tempor mattis auctor. Nunc tempor dapibus purus ac malesuada. Vestibulum dapibus molestie erat in interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             }
         ],
         "location": {
@@ -107,11 +108,12 @@
         "indexation" : false,
         "paymentMethod" : "monthly",
         "network" : "4G",
+        "paper" : "http://bite.provictus.lt/assets/contract.pdf",
         "contacts" : [
             {
                 "note": "Administratorius",
                 "name": "Maryte Kvietkute",
-                "email": "sexy_bunny69@one.lt",
+                "email": "demo@demo.lt",
                 "phone": "862965775"
             }
         ],
@@ -124,7 +126,7 @@
             {
                 "user": "Jonas Jonaitis",
                 "date": "2015-07-13 15:13",
-                "message": "Jau nebe ok. lala"
+                "message": "Jau nebe. Reikia dirbti, ieškoti alternatyvų"
             }
         ],
         "location": {
@@ -151,17 +153,18 @@
         "indexation" : false,
         "paymentMethod" : "monthly",
         "network" : "3G",
+        "paper" : "http://bite.provictus.lt/assets/contract.pdf",
         "contacts" : [
             {
                 "note": "sesuo",
                 "name": "Maryte Kvietkute",
-                "email": "sexy_bunny69@one.lt",
+                "email": "demo@demo.lt",
                 "phone": "862977775"
             },
             {
                 "note": "Nuomotojas",
                 "name": "Petras Kirdeikis",
-                "email": "sexy_bunny68@one.lt",
+                "email": "demo@demo.lt",
                 "phone": ""
             }
         ],
@@ -169,12 +172,12 @@
             {
                 "user": "Antanas Jonaitis",
                 "date": "2015-07-10 10:43",
-                "message": "Pakalbėjau, viskas ok!"
+                "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel molestie odio. Phasellus sed varius sem, ac convallis enim. In ut purus in odio pretium placerat. Fusce tempor mattis auctor. Nunc tempor dapibus purus ac malesuada. Vestibulum dapibus molestie erat in interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             {
                 "user": "Jonas Petrikas",
                 "date": "2015-07-13 15:13",
-                "message": "Jau nebe ok. lala"
+                "message": "Nullam tempus faucibus ante nec sollicitudin. Aliquam porta viverra neque at venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc egestas dictum mauris. Vivamus aliquet velit eget orci pretium, eu porttitor odio blandit. Fusce molestie neque a aliquet malesuada. Nam sed sapien nibh. "
             }
         ],
         "location": {
@@ -201,11 +204,12 @@
         "indexation" : false,
         "paymentMethod" : "yearly",
         "network" : "4G",
+        "paper" : "http://bite.provictus.lt/assets/contract.pdf",
         "contacts" : [
             {
                 "note": "Atstovas - administratorė",
                 "name": "Maryte Kvietkute",
-                "email": "sexy_bunny69@one.lt",
+                "email": "demo@demo.lt",
                 "phone": "862965775"
             }
         ],
@@ -213,7 +217,7 @@
             {
                 "user": "Rokiškis Radiškevičius",
                 "date": "2014-07-10 10:43",
-                "message": "nori daugiau"
+                "message": "Nullam tempus faucibus ante nec sollicitudin. Aliquam porta viverra neque at venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc egestas dictum mauris. Vivamus aliquet velit eget orci pretium, eu porttitor odio blandit. Fusce molestie neque a aliquet malesuada. Nam sed sapien nibh. "
             }
         ],
         "location": {
@@ -240,11 +244,12 @@
         "indexation" : false,
         "paymentMethod" : "monthly",
         "network" : "4G",
+        "paper" : "http://bite.provictus.lt/assets/contract.pdf",
         "contacts" : [
             {
                 "note": "Direktorius",
                 "name": "Petras Kirdeikis",
-                "email": "sexy_bunny68@one.lt",
+                "email": "demo@demo.lt",
                 "phone": ""
             }
         ],
@@ -252,7 +257,7 @@
             {
                 "user": "Zigmas Butkus",
                 "date": "2015-08-10 10:43",
-                "message": "Pakalbėjau, viskas ok!"
+                "message": "OK!"
             }
         ],
         "location": {

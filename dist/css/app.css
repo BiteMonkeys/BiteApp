@@ -146,3 +146,16 @@ map{
     padding-left: 0;
     padding-right: 0;
 }
+
+.labels {
+    /*color: white;*/
+    /*background-color: red;*/
+    font-family: "Lucida Grande", "Arial", sans-serif;
+    font-size: 10px;
+    text-align: center;
+    width: 10px;
+    white-space: nowrap;
+}
+#sidebar-wrapper{
+    outline: none;
+}

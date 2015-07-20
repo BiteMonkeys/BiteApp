@@ -1,7 +1,7 @@
 <div id="sidebar-wrapper" class="container-fluid no-padding">
         <div class="row no-margin" id="station-info">
+            <button type="button" class="close pull-left m-l-5" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h2 id="station-title">{{stationDetails.name}}</h2> <span class="info-company">{{stationDetails.company}}</span>
-
             <tabset justified="true">
                 <tab heading="Information">
                         <dl class="dl-horizontal">
@@ -70,7 +70,11 @@
                             <dt>Network</dt>
                             <dd ng-bind-html="showNetwork(stationDetails.network)"></dd>
                         </dl>
-                    <div style="height: 35px;"></div>
+                        <dl class="dl-horizontal">
+                            <dt>Contract</dt>
+                            <dd><a href="{{stationDetails.paper}}" target=_blank><img src="assets/img/pdf_icon.png"></a></dd>
+                        </dl>
+                    <div style="height: 15px;"></div>
                 </tab>
                 <tab heading="Contacts">
                     <dl class="dl-horizontal row no-row-padding" ng-repeat="contact in stationDetails.contacts">
@@ -83,6 +87,8 @@
                             <div class="contact-phone">{{contact.phone}}</div>
                         </dd>
                     </dl>
+                    <div style="height: 15px;"></div>
+                    <button type="button" class="btn btn-primary btn-xs pull-right m-b-10">Add new contact</button>
                 </tab>
                 <tab heading="Notes">
                     <dl class="dl-horizontal row no-row-padding" ng-repeat="note in stationDetails.notes">
@@ -94,6 +100,7 @@
                             <div class="contact-email">{{note.message}}</div>
                         </dd>
                     </dl>
+                    <div style="height: 15px;"></div>
                 </tab>
             </tabset>
         </div>

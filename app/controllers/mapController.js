@@ -33,10 +33,30 @@ app.controller('MapsController', ['$rootScope', "$scope", '$state', 'stationsRes
 
                 $rootScope.positions.push({lat: station.location.latitude, lng: station.location.longitude});
 
+                if (station.company === "Bite") {
+                    var image = {
+                        url: 'assets/img/2_2.png',
+                        size: new google.maps.Size(37, 43),
+                        origin: new google.maps.Point(0, 0),
+                        anchor: new google.maps.Point(17, 34)
+                       // scaledSize: new google.maps.Size(25, 25)
+                    };
+                   // var image =
+                } else {
+                    var image = {
+                        url: 'assets/img/1_2.png',
+                        size: new google.maps.Size(37, 43),
+                        origin: new google.maps.Point(0, 0),
+                        anchor: new google.maps.Point(17, 34)
+                        //scaledSize: new google.maps.Size(25, 25)
+                    };
+                    //var image = 'assets/img/1_2.png';
+                }
                 var marker = new google.maps.Marker({
                     position: station.position,
                     map: map,
-                    title: station.title,
+                    icon: image,
+                    title: station.name,
                     station: station
                 });
 
@@ -44,9 +64,9 @@ app.controller('MapsController', ['$rootScope', "$scope", '$state', 'stationsRes
                 $rootScope.markers.push(marker);
             });
 
-            google.maps.event.addListener(map, 'click', function () {
-                closeDetails(map);
-            });
+            //google.maps.event.addListener(map, 'click', function () {
+            //    closeDetails(map);
+            //});
 
             $rootScope.map = map;
         });
@@ -59,16 +79,24 @@ app.controller('MapsController', ['$rootScope', "$scope", '$state', 'stationsRes
             $scope.$apply(function () {
                 $rootScope.stationDetails = marker.station;
             });
+
+            $timeout(function() {
+                $("#sidebar-wrapper button.close").click(function() {
+                    closeDetails($rootScope.map)
+                })
+            }, 400);
         }
 
 
         function closeDetails(map) {
             $("#wrapper").addClass("toggled");
+            //$("#sidebar-wrapper").toggle(400);
             $rootScope.detailsOpened = false;
-            map.setZoom(8);
+
             $timeout(function() {
+                map.setZoom(8);
                 map.setCenter($rootScope.lithuniaLocation);
-            }, 400);
+            }, 500);
         }
 
         function attachEventToMarker(marker, map){
